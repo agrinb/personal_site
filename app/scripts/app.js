@@ -8,6 +8,7 @@
  *
  * Main module of the application.
  */
+
 angular
   .module('alekNgApp', [
     'ngAnimate',
@@ -22,7 +23,7 @@ angular
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
+        templateUrl: 'views/page.html',
         controller: 'MainCtrl'
       })
       .when('/about', {
