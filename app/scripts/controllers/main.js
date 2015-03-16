@@ -7,14 +7,28 @@
  * # MainCtrl
  * Controller of the alekNgApp
  */
+// angular.module('alekNgApp')
+//   .controller('MainCtrl', function ($scope) {
+//     $scope.menu = [
+//       'HTML5 Boilerplate',
+//       'AngularJS',
+//       'Karma'
+//     ];
+//   });
+
 angular.module('alekNgApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.menu = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+  .controller('MainCtrl', ['$anchorScroll', '$location', '$scope',
+  function ($anchorScroll, $location, $scope) {
+    $scope.scrollTo = function(x) {
+      if ($location.hash() !== x ) {
+        $location.hash(x);
+      } else {
+        $anchorScroll();
+      }
+    };
+  }
+]);
+
 
 
 $(document).on("ready", function() {
@@ -22,31 +36,15 @@ $(document).on("ready", function() {
 });
 
 
-
-
-// function goingDown(i) {
-//    $(".timeline").children().eq(i).removeClass("current");
-//     i++
-//    $(".timeline").children().eq(i).addClass("current");
-// }
-
-// function goingUp(i) {
-//    $(".timeline").children().eq(i).removeClass("current");
-//     i = i - 1
-//    $(".timeline").children().eq(i).addClass("current");
-// }
-
 function onScroll(event){
     var scrollPos = $(document).scrollTop();
-    for (var i = 0; i < $(".timeline").children().length; i++) {
-    //$(".timeline").children().each(function () {
-    //    var currNode = $(this);
-        var currNode = $(".timeline").children().eq(i);
+    for (var i = - 1 ; i < $(".timeline").children().length - 1; i++) {
+        var currNode = $(".timeline").children().eq(i + 1);
         var refElement = currNode.children().eq(0);
-        if (refElement.offset().top <= scrollPos + 150 && refElement.offset().top + refElement.height() > scrollPos) {
-          // if(i == 0) {
-          //   $(".timeline").children().eq(i).addClass("current");
-          // } else {
+        if (typeof(refElement.offset()) === "undefined") {
+          console.log("this");
+        }
+        if (refElement.offset().top <= scrollPos + 350 && refElement.offset().top + refElement.height() - 100 > scrollPos) {
           $(".timeline").children().eq(i).removeClass("current");
           i++
           $(".timeline").children().eq(i).addClass("current");
@@ -55,3 +53,5 @@ function onScroll(event){
         }
     };
 }
+
+ 

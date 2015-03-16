@@ -34,7 +34,8 @@ angular
         templateUrl: 'views/page.html',
         controller: 'MainCtrl'
       })
-      .otherwise({
-        redirectTo: '/'
-      });
+
+      // .otherwise({
+      //   redirectTo: '/'
+      // });
   });

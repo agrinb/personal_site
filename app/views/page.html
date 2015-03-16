@@ -1,5 +1,5 @@
 <!-- CONTAINER -->
-<div class="container-fluid" id="container">
+<div class="container-fluid" id="container" ng-controller="MainCtrl">
 <!-- HEADER -->
     <header class="header">
     <!--     <img src="images/avatar2.jpg" alt="avatar" id="avatar"> -->
@@ -9,10 +9,11 @@
         <!-- NAV MENU -->
         <ul class="vs-nav">
             <!-- InstanceBeginEditable name="Menu-Content" -->
-            <li><a href="#/about">about me</a></li>
-            <li><a href="#/portfolio">portfolio</a></li>
-            <li><a href="#/resume">resume</a></li>
-            <li><a href="#/contact">contact</a></li>
+           
+            <li><a href="" ng-click="scrollTo('portfolio')">portfolio</a></li>
+            <li><a href=""  ng-click="scrollTo('timeline')">timeline</a></li>
+            <li><a href=""  ng-click="scrollTo('resume')">resume</a></li>
+            <li><a href=""  ng-click="scrollTo('contact')">contact</a></li>
             <!-- InstanceEndEditable -->
         </ul>
         <!-- NAV MENU -->
@@ -46,11 +47,13 @@
         <!-- intro -->
     </div>
     <!-- SECTION BREAK -->
+
+    <section class="portfolio" id="portfolio">
+
     <div class="strike">
         <span class="section-title">Work and Play</span>
     </div>
     <!-- SECTION BREAK -->
-    <section class="portfolio">
         <div class="row">
             <div class="col-md-4">
                 <div class="port-item">
@@ -87,14 +90,16 @@
             </div>
         </div>
     </section>
-    <!-- SECTION BREAK -->
+
+            <!-- PAGE : RESUME -->
+    <section id="timeline">
+
+        <!-- SECTION BREAK -->
     <div class="strike">
         <span class="section-title">Timeline</span>
     </div>
     <!-- SECTION BREAK -->
 
-            <!-- PAGE : RESUME -->
-    <section id="resume" class="resume">
         <div class="content">
             <!-- CONTENT -->
             <!-- row -->
@@ -171,10 +176,10 @@
         </div>
         <!-- CONTENT -->
         
-    </section>
+    </section id="resume">
     <!-- PAGE : RESUME -->
     <div class="strike">
-        <span class="section-title">Downloads</span>
+        <span class="section-title" id="resume">Downloads</span>
     </div>
     <!-- SECTION BREAK -->
     <section class="downloads">
@@ -183,7 +188,7 @@
 
 <!-- DOWNLOAD BUTTON -->
         <div class="download-button">
-            <a href="#" class="button primary" id="cv">DOWNLOAD CV</a>
+            <a href="../public/Alek_Grinberg.pdf" class="button primary" id="cv" target="_self" download="Alek_Grinberg.pdf">DOWNLOAD CV</a>
         </div>
 <!-- DOWNLOAD BUTTON -->
                 <i class="glyphicon glyphicon-folder-open"></i><span class="sec-title">GitHub:</span>
@@ -192,7 +197,7 @@
         
 <!-- DOWNLOAD BUTTON -->
         <div class="download-button">
-            <a href="#" class="button primary" id="github">MY GITHUB</a>
+            <a href="https://github.com/agrinb" class="button primary" id="github">MY GITHUB</a>
         </div>
 <!-- DOWNLOAD BUTTON -->
 
@@ -203,20 +208,21 @@
         
 <!-- DOWNLOAD BUTTON -->
         <div class="download-button">
-            <a href="#" class="button primary" id="linkedin">MY LINKEDIN PROFILE</a>
+            <a href="http://linkedin.com/in/agrinberg" class="button primary" id="linkedin">MY LINKEDIN PROFILE</a>
         </div>
 <!-- DOWNLOAD BUTTON -->
     </section>
-    
+
+    <!-- .contact-form -->
+
+    <section class="contact" id="contact">  
+
      <!-- SECTION BREAK -->
     <div class="strike">
         <span class="section-title">Drop Me A Line</span>
     </div>
     <!-- SECTION BREAK -->
-  
-    <!-- .contact-form -->
-
-    <section class="contact">    
+    
         <div class="contact-form">
             <form id="contact-form" action="/postEmail" method="post">
                 
