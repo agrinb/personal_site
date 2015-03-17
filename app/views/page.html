@@ -63,7 +63,9 @@
                     <div class="port-desc">
                         <h3>JobSniper</h3>
                         <p>Chrome Extension App with a Ruby on Rails Backend. You tell it the title or keyword and it tells you when a job is on the company careers page.</p>
-                        <h5>View Now</h5>
+                        <div class="port-button">
+                            <h5><a class="button" ng-href="https://github.com/agrinb/">View Now</a></h5>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -75,7 +77,9 @@
                     <div class="port-desc">
                         <h3>Ruby</h3>
                         <p>Collections of various Algorithms solved in Ruby, including merge sort, quicksort, ProjectEuler and other coding katas that I loved working on.</p>
-                        <h5>View Now</h5>
+                        <div class="port-button">
+                            <h5><a class="button" ng-href="https://github.com/agrinb/">View Now</a></h5>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -86,8 +90,10 @@
                     </div>
                     <div class="port-desc">
                         <h3>Neighborhoods</h3>
-                        <p>A simple Boston neighborhood review website done in Ruby on Rails with Full Text Search.</p>
-                        <h5>View Now</h5>
+                        <p>A simple Boston neighborhood review web app developed in Ruby on Rails with Full Text Search.</p>
+                        <div class="port-button">
+                            <h5><a class="button" ng-href="https://github.com/agrinb/">View Now</a></h5>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -101,7 +107,9 @@
                     <div class="port-desc">
                         <h3>Python</h3>
                         <p>Some recent coding challenges in Python. Including a Hashmap with amortized constant time lookups.</p>
-                        <h5>View Now</h5>
+                         <div class="port-button">
+                            <h5><a class="button" ng-href="https://github.com/agrinb/">View Now</a></h5>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -113,7 +121,9 @@
                     <div class="port-desc">
                         <h3>Reeally</h3>
                         <p>Breakabble toy from Launch Academy. What home sales should be in the Zillow age. On-demand real estate agents. </p>
-                        <h5>View Now</h5>
+                        <div class="port-button">
+                            <h5><a class="button" ng-href="https://github.com/agrinb/">View Now</a></h5>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -125,7 +135,9 @@
                     <div class="port-desc">
                         <h3>Work in Process</h3>
                         <p>I'm working on something really special!</p>
-                    <h5>View Now</h5>
+                        <div class="port-button">
+                            <h5><a class="button" ng-href="https://github.com/agrinb/">View Now</a></h5>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -270,7 +282,7 @@
     </div>
     <!-- SECTION BREAK -->
     
-        <div class="contact-form">
+        <div class="contact-form" ng-controller="EmailCtrl">
             <form id="contact-form" action="/postEmail" method="post">
                 
                 <!-- enter mail subject here -->
@@ -292,7 +304,14 @@
                   <textarea name="message" id="message" class="required"></textarea>
                 </p>
                
-                
+                <!-- DOWNLOAD BUTTON -->
+                <div class="download-button">
+                    <a  ng-click="openLightboxModal($index)" class="button primary" id="linkedin">Lightbox</a>
+                </div>
+                <!-- DOWNLOAD BUTTON -->
+
+
+
                 <div class="download-button">
                   <input type="submit" class="submit button primary" value="SEND">
                 </div>           

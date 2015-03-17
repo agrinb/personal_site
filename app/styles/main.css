@@ -199,22 +199,34 @@ li {
     text-align: center;
     margin: 10px 0;
     padding:10px 0;
-    background: #f9f9f9;
+    background: #F1F1F1;
 }
 .port-desc p {
-    /*text-align: center;*/ /*Left align paragraphs are easier to read, but if you want to change it back, that's fine too.*/
+  height: 6.5em;
 }
 
-.port-desc h5 {
+/*.port-desc h5 {
   font-weight: 700px;
   text-align: center;
   margin: 10px 60px;
   margin-top: 20px;
   padding: 10px 0;
-  background: #cccccc;
+  background: #dbdbdb;
   border-radius: 5px;
-/*  box-shadow: 1px 1px 1px 1px #888888;*/
+}*/
 
+.port-button{
+  text-align: center;
+}
+
+.port-button {
+  text-align: center;
+}
+
+.port-button a:hover {
+  text-decoration: none;
+  background-color: #334455;
+  color: white;
 }
 
 h2 {
@@ -284,12 +296,12 @@ padding-bottom: 8px;
   margin:0; 
 }   
 .event {
-position: relative;
-padding: 26px 32px;
-margin-bottom: 3em; 
-background: #ffffff; 
-border: 3px solid #DDE4E6; 
-border-radius: 6px;
+  position: relative;
+  padding: 26px 32px;
+  margin-bottom: 3em; 
+  background: #ffffff; 
+  border: 3px solid #DDE4E6; 
+  border-radius: 6px;
 }
 .event:after,
 .event:before {
@@ -344,7 +356,7 @@ margin-top: -10px;
   font-size: 0.9em; 
   text-transform: uppercase; 
   font-weight: 800; 
-  color: #d1dbdc;
+  color: #c4cfd1;
 }
 .event p {
   margin: .6em 0 .2em 0

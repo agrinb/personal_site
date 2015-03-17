@@ -8,13 +8,24 @@
  * Controller of the alekNgApp
  */
 angular.module('alekNgApp')
-  .controller('EmailCtrl', function ($scope) {
+  .controller('EmailCtrl', function ($scope, Lightbox) {
+    $scope.emailSentResponse = ["Thank you, your email is on it's way. Chat soon!"]
     $scope.connectionRequest = {}
-  });
+    console.log('I\'m here');
+  $scope.openLightboxModal = function (index) {
+    Lightbox.openModal($scope.emailSentResponse, index);
+  };
+});
+
+angular.module('alekNgApp').config(function (LightboxProvider) {
+  LightboxProvider.getResponse = function (res) {
+    return res
+  };
+  LightboxProvider.templateUrl = 'app/views/lightbox.html';
+});
 
 console.log('loaded');
 $(document).on('submit', "form", function (event) { 
-  alert("submit");
   event.preventDefault();
   var message = {
     name: $('input#name').val(),
