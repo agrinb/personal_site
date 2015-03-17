@@ -82,14 +82,14 @@ body {
     padding-right: 0;
 }
   /* Space out the masthead */
-  .header {
+.header {
     margin-bottom: 30px;
 }
   /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
+.jumbotron {
     border-bottom: 0;
 }
-}
+
 
 ul {
   list-style: none;
@@ -109,6 +109,11 @@ li {
   font-size: 2.7em;
   padding: 1em;
 }
+
+.vs-nav li a:focus {
+  outline: 0;
+}
+
 .header h1 {
   margin: .9em 0 0 0;
   padding: 0;
@@ -198,6 +203,18 @@ li {
 }
 .port-desc p {
     /*text-align: center;*/ /*Left align paragraphs are easier to read, but if you want to change it back, that's fine too.*/
+}
+
+.port-desc h5 {
+  font-weight: 700px;
+  text-align: center;
+  margin: 10px 60px;
+  margin-top: 20px;
+  padding: 10px 0;
+  background: #cccccc;
+  border-radius: 5px;
+/*  box-shadow: 1px 1px 1px 1px #888888;*/
+
 }
 
 h2 {
@@ -405,12 +422,13 @@ a.more-link:hover {
 .contact-form p:nth-of-type(4) {
    width: 100%
 } 
-.contact-form input:not([type=submit]):not([type=button]):not([type=file]):not([type=radio]):not([type=checkbox]),
+.contact-form input:not([type=submit]),
 .contact-form textarea {
   width: 100%; 
   padding: 1.4em; 
   display: block;
-  border-radius: 3px; 
+  border-radius: 3px;
+  border: 2px inset; 
   -moz-box-sizing: border-box; -webkit-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box;
 }
 .contact-form textarea {
