@@ -27,9 +27,9 @@ angular
         templateUrl: 'views/page.html',
         controller: 'MainCtrl'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
+      .when('/lightbox', {
+        templateUrl: 'views/lightbox.html',
+        controller: 'EmailCtrl'
       })
       .when('/page', {
         templateUrl: 'views/page.html',

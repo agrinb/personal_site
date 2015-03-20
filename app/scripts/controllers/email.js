@@ -9,11 +9,13 @@
  */
 angular.module('alekNgApp')
   .controller('EmailCtrl', function ($scope, Lightbox) {
-    $scope.emailSentResponse = ["Thank you, your email is on it's way. Chat soon!"]
-    $scope.connectionRequest = {}
+    $scope.images= [ {msg: "Thank you, your email is on it's way. Chat soon!", 
+      url: '/views/lightbox.html'
+    } ];
+    $scope.connectionRequest = {};
     console.log('I\'m here');
   $scope.openLightboxModal = function (index) {
-    Lightbox.openModal($scope.emailSentResponse, index);
+    Lightbox.openModal($scope.images, 0);
   };
 });
 
@@ -21,7 +23,7 @@ angular.module('alekNgApp').config(function (LightboxProvider) {
   LightboxProvider.getResponse = function (res) {
     return res
   };
-  LightboxProvider.templateUrl = 'app/views/lightbox.html';
+  LightboxProvider.templateUrl = '/views/lightbox.html';
 });
 
 console.log('loaded');
