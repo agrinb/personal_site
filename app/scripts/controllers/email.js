@@ -26,7 +26,6 @@ angular.module('alekNgApp').config(function (LightboxProvider) {
   LightboxProvider.templateUrl = '/views/lightbox.html';
 });
 
-console.log('loaded');
 $(document).on('submit', "form", function (event) { 
   event.preventDefault();
   var message = {
@@ -35,9 +34,12 @@ $(document).on('submit', "form", function (event) {
     mbody: $('textarea#message').val()
   };
   $.ajax({
-    type: "GET",
-    url: 'http://localhost:5858/getEmail',
+    type: "POST",
+    url: 'http://job-sniper.herokuapp.com/send_email',
     data: message,
-    success:  console.log('email sent successfully'), 
+    success:  function (res) {
+      console.log(res);
+    }
   });
 });
+

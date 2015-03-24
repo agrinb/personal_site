@@ -283,7 +283,7 @@
     <!-- SECTION BREAK -->
     
         <div class="contact-form" ng-controller="EmailCtrl">
-            <form id="contact-form" action="/postEmail" method="post">
+            <form id="contact-form" method="post">
                 
                 <!-- enter mail subject here -->
                 <input type="hidden" name="subject" id="subject" value="You have a new message.">
@@ -304,16 +304,9 @@
                   <textarea name="message" id="message" class="required"></textarea>
                 </p>
                
-                <!-- DOWNLOAD BUTTON -->
-                <div class="download-button">
-                    <a  ng-click="openLightboxModal($index)" class="button primary" id="linkedin">Lightbox</a>
-                </div>
-                <!-- DOWNLOAD BUTTON -->
-
-
 
                 <div class="download-button">
-                  <input type="submit" class="submit button primary" value="SEND">
+                  <input ng-click="openLightboxModal($index)" type="submit" class="submit button primary" value="SEND">
                 </div>           
             </form>       
         </div>
