@@ -14,7 +14,6 @@ var morgan         = require('morgan');
 
 var gzippo = require('gzippo');
 var express = require('express');
-var nodemailer = require("nodemailer");
 var app = express();
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
