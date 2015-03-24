@@ -35,6 +35,7 @@ $(document).on('submit', "form", function (event) {
   };
   $.ajax({
     type: "POST",
+    dataType: 'json',
     url: 'http://job-sniper.herokuapp.com/send_email',
     data: message,
     success:  function (res) {

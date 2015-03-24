@@ -237,7 +237,7 @@ h2 {
   text-align: center;
 }
 
-.portfolio, .resume, .downloads, .contact {
+.portfolio, .timeline, .resume, .downloads, .contact {
   padding-top: 1.6em;
   width: 80%;
   margin: 0 auto;
@@ -462,4 +462,12 @@ input.submit {
   color: #6A7686; 
   text-shadow: none; 
   border-radius: 4px;
+}
+
+.modal-content {
+  height: 9em;
+}
+
+.modal-content a.button {
+  margin-top: 3em;
 }
