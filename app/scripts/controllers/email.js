@@ -12,6 +12,7 @@ angular.module('alekNgApp').controller('EmailCtrl', function ($scope, Lightbox) 
     url: '/views/lightbox.html'
   } ];
   $scope.openLightboxModal = function (index) {
+    console.log('success');
     Lightbox.openModal($scope.images, 0);
   };
 
@@ -26,9 +27,7 @@ angular.module('alekNgApp').controller('EmailCtrl', function ($scope, Lightbox) 
       type: "POST",
       url: 'http://job-sniper.herokuapp.com/send_email',
       data: message,
-      success:  function (res) {
-        console.log(res);
-      }
+      success: $scope.openLightboxModal()
     });
   });
 });
