@@ -1,4 +1,9 @@
 /* Space out content a bit */
+@font-face {
+   font-family: greatVibes;
+   src: url(/styles/fonts/GreatVibes-Regular.ttf);
+}
+
 body {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -245,13 +250,13 @@ h2 {
 }
 
 .section-title {
-  font-family: 'Great Vibes', cursive;
+  font-family: greatVibes, cursive;
   font-size: 3em;
   text-align: center;
 }
 
 .alek {
-  font-family: 'Great Vibes', cursive;
+  font-family: greatVibes, cursive;
   font-size: 60px;
   text-align: center;
   margin: 25px;
@@ -469,5 +474,6 @@ input.submit {
 }
 
 .modal-content a.button {
+  display: inline-block;
   margin-top: 3em;
 }
